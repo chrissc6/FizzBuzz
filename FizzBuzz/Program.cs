@@ -10,13 +10,13 @@ namespace FizzBuzz
     {
         static void Main(string[] args)
         {
-            int total = 100;
+            int total = 1000;
             int a = 3;
             int b = 5;
 
-            Console.WriteLine($"FizzBuzz. \nPrint Fizz for a number that has a multiple of {a}," +
-                $" and Buzz for a number that has a multiple of {5}. \nAnd FizzBuzz if its a multiple " +
-                $"of both {a} and {5}.");
+            Console.WriteLine($"FizzBuzz. \nPrint Fizz for a number that is a multiple of {a}," +
+                $" and Buzz for a number that is a multiple of {b}. \nAnd FizzBuzz if its a multiple " +
+                $"of both {a} and {b}.");
 
             Console.WriteLine($"*FizzBuzz until 1-{total}.*");
 
