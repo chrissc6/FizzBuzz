@@ -10,7 +10,7 @@ namespace FizzBuzz
     {
         static void Main(string[] args)
         {
-            int total = 1000;
+            int total = 100;
             int a = 3;
             int b = 5;
 
@@ -22,20 +22,31 @@ namespace FizzBuzz
 
             for (int i = 1; i < total; i++)
             {
-                if(i % 3 == 0 && i % 5 == 0)
-                {
-                    Console.WriteLine("FizzBuzz");
-                }
-                else if(i % 3 == 0)
-                {
-                    Console.WriteLine("Fizz");
-                }
-                else if(i % 5 == 0)
-                {
-                    Console.WriteLine("Buzz");
-                }
-                else
-                    Console.WriteLine(i);
+                //better way
+                string output = "";
+
+                if(i % a == 0) { output += "Fizz"; }
+                if(i % b == 0) { output += "Buzz"; }
+                //could easy add more than two numbers now
+
+                if (output == "") { Console.WriteLine(i); }
+                else { Console.WriteLine(output); }
+                
+
+                //if(i % a == 0 && i % b == 0)
+                //{
+                //    Console.WriteLine("FizzBuzz");
+                //}
+                //else if(i % a == 0)
+                //{
+                //    Console.WriteLine("Fizz");
+                //}
+                //else if(i % b == 0)
+                //{
+                //    Console.WriteLine("Buzz");
+                //}
+                //else
+                //    Console.WriteLine(i);
             }
 
             Console.WriteLine("*Fizzbuzz done.*");
