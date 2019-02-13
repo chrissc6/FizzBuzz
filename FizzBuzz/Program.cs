@@ -14,6 +14,8 @@ namespace FizzBuzz
             int a = 3;
             int b = 5;
 
+
+
             Console.WriteLine($"FizzBuzz. \nPrint Fizz for a number that is a multiple of {a}," +
                 $" and Buzz for a number that is a multiple of {b}. \nAnd FizzBuzz if its a multiple " +
                 $"of both {a} and {b}.");
@@ -22,16 +24,49 @@ namespace FizzBuzz
 
             for (int i = 1; i < total; i++)
             {
-                //better way
+                //even better way, you can now add more numbers and words
+
+                int[] ints = new int[] { 3, 5, 7, 11 };
+                string[] strs = new string[] { "Fizz", "Buzz", "Fuzz", "Bizz" };
+
                 string output = "";
+                int y = 0;
+                string strA = strs[0];
+                int z = 0;
 
-                if(i % a == 0) { output += "Fizz"; }
-                if(i % b == 0) { output += "Buzz"; }
-                //could easy add more than two numbers now
+                while (y == 0)
+                {
+                    foreach (int x in ints)
+                    {
+                        var ele = Array.FindIndex(ints, idx => idx == x);
+                        z = ele;
+                        if (i % x == 0)
+                        {
+                            strA = strs[z];
+                            output += strA;
+                        }
+                    }
+                    y = 1;
+                    z = 0;
+                    if (output == "") { Console.WriteLine(i); }
+                    else Console.WriteLine(output);
+                }
 
-                if (output == "") { Console.WriteLine(i); }
-                else { Console.WriteLine(output); }
-                
+
+
+
+
+
+                ////better way
+                //string output = "";
+
+                //if(i % a == 0) { output += "Fizz"; }
+                //if(i % b == 0) { output += "Buzz"; }
+                ////could easy add more than two numbers now
+
+                //if (output == "") { Console.WriteLine(i); }
+                //else { Console.WriteLine(output); }
+
 
                 //if(i % a == 0 && i % b == 0)
                 //{
